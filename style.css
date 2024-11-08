@@ -329,3 +329,27 @@ body {
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
+/* Style the download button */
+.download-button {
+    display: inline-block;
+    background-color: #007bff; /* Changed to blue */
+    color: white;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .download-button:hover {
+    background-color: #0056b3; /* Darker blue for hover effect */
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+  }
+  
+  /* Fix the button to the bottom right */
+  .download-button {
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom of the screen */
+    right: 20px; /* Distance from the right side of the screen */
+    z-index: 1000; /* Make sure it stays on top of other elements */
+  }
