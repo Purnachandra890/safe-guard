@@ -329,6 +329,32 @@ body {
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
+.contact-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: nowrap; /* Keeps cards in a single row */
+    overflow-x: auto; /* Enables horizontal scroll on smaller screens */
+    padding: 10px 0;
+  }
+  
+  .contact-card {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 250px; /* Ensures cards don’t shrink too small on small screens */
+  }
+  
+  .contact-image {
+    width: 100px; /* Adjust as needed */
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
 /* Style the download button */
 .download-button {
     display: inline-block;
