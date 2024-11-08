@@ -379,3 +379,7 @@ body {
     right: 20px; /* Distance from the right side of the screen */
     z-index: 1000; /* Make sure it stays on top of other elements */
   }
+.contact-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit the text color from the parent */
+  }
