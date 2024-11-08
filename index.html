@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Women's Protection</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container">
+        <a href="#" class="logo">Women’s Protection</a>
+        <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section class="main-content" id="home">
+      <div class="container">
+        <h1>Empowering Women in Crisis with Real-Time Support</h1>
+        <p>
+          SafeGuard is a cutting-edge mobile application dedicated to
+          safeguarding women by providing instant emergency alerts and support
+          during critical situations. With our custom machine learning
+          technology, SafeGuard listens for distress phrases like "Help me" and
+          "Save me" across multiple languages and automatically sends
+          location-based alerts to emergency contacts and services.
+        </p>
+        <h1>Shake Video</h1>
+        <video controls class="video">
+          <source
+            src="https://res.cloudinary.com/dz6ueggth/video/upload/v1731087033/lavuud5dqzjrqqzfmnnn.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+
+        <!-- video carousal -->
+        <h1>Distress Audio</h1>
+        <div class="video-carousel-container">
+          <div class="video-carousel">
+            <video controls class="carousel-video">
+              <source
+                src="https://res.cloudinary.com/dz6ueggth/video/upload/v1731088328/wjhx8kzhsvsugkk7w4od.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+            <video controls class="carousel-video">
+              <source
+                src="https://res.cloudinary.com/dz6ueggth/video/upload/v1731088663/owsqb0quusxwke76ecx2.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+            <video controls class="carousel-video">
+              <source
+                src="https://res.cloudinary.com/dz6ueggth/video/upload/v1731088706/bre9mze9dqxwrjlz1ggh.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <button class="prev" onclick="moveVideoCarousel(-1)">&#10094;</button>
+          <button class="next" onclick="moveVideoCarousel(1)">&#10095;</button>
+        </div>
+
+        <h1>ChatBot</h1>
+        <video controls class="video-screen-recording">
+          <source
+            src="https://res.cloudinary.com/dz6ueggth/video/upload/v1731089029/tr88ckqyysxouhrufbny.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+
+        <h1>Screenshots of Applications</h1>
+        <div class="carousel-container">
+          <div class="carousel">
+            <img
+              src="https://res.cloudinary.com/dz6ueggth/image/upload/v1731087190/wfikhnig7ut90vrfu89d.jpg"
+              alt="Sample photo 1"
+              class="carousel-image"
+            />
+            <img
+              src="https://res.cloudinary.com/dz6ueggth/image/upload/v1731087190/q2lwdxjrmet4olehw238.jpg"
+              alt="Sample photo 2"
+              class="carousel-image"
+            />
+            <img
+              src="https://res.cloudinary.com/dz6ueggth/image/upload/v1731087190/yfcok3x8sjuxphzbvwbd.jpg"
+              alt="Sample photo 3"
+              class="carousel-image"
+            />
+            <img
+              src="https://res.cloudinary.com/dz6ueggth/image/upload/v1731087189/euo6dng9cul1gyhc8j8s.jpg"
+              alt="Sample photo 4"
+              class="carousel-image"
+            />
+            <img
+              src="https://res.cloudinary.com/dz6ueggth/image/upload/v1731087188/eqct0yroye3qwaajqoac.jpg"
+              alt="Sample photo 2"
+              class="carousel-image"
+            />
+            <img
+              src="https://res.cloudinary.com/dz6ueggth/image/upload/v1731087187/i4hbk6k6wflliahhva2i.jpg"
+              alt="Sample photo 3"
+              class="carousel-image"
+            />
+            <img
+              src="https://res.cloudinary.com/dz6ueggth/image/upload/v1731087555/crbeodmvqhhcfgpsqko5.jpg"
+              alt="Sample photo 4"
+              class="carousel-image"
+            />
+            <img
+              src="https://res.cloudinary.com/dz6ueggth/image/upload/v1731087654/u6srxkm5x6ekuuwxrt71.jpg"
+              alt="Sample photo 2"
+              class="carousel-image"
+            />
+          </div>
+          <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
+          <button class="next" onclick="moveCarousel(1)">&#10095;</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="container">
+        <h2>About Us</h2>
+        <p>
+          SafeGuard exists to make the world a safer place for women by
+          addressing urgent needs through advanced technology. We believe in
+          empowering women by enabling rapid access to help during times of
+          crisis, ensuring timely protection and response for their safety and
+          peace of mind.
+        </p>
+        <p>
+          By combining multilingual voice recognition with real-time location
+          sharing, SafeGuard connects women in distress with emergency contacts
+          and services. The app’s user-friendly design and critical safety
+          features make it a reliable resource for anyone in need.
+        </p>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+      <div class="container">
+        <h2>Our Services</h2>
+        <ul>
+          <li>
+            <strong>Emergency Alert System:</strong> Instantly sends alerts to
+            pre-defined contacts and authorities with real-time location
+            tracking.
+          </li>
+          <li>
+            <strong>Multilingual Voice Recognition:</strong> Recognizes distress
+            phrases in multiple languages, ensuring no language barrier prevents
+            access to emergency help.
+          </li>
+          <li>
+            <strong>Automatic SOS Activation:</strong> SafeGuard triggers an SOS
+            alert immediately upon detecting emergency phrases, ensuring help is
+            mobilized without delay.
+          </li>
+          <li>
+            <strong>Secure Data Storage:</strong> All communications and
+            interactions are securely stored and managed, prioritizing user
+            privacy and confidentiality.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p>
+          For inquiries, partnerships, or support, reach out to us through our
+          contact page. Together, we can make a difference in women's safety
+          worldwide.
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 Women’s Protection. All Rights Reserved.</p>
+        <ul class="footer-links">
+          <li><a href="#privacy">Privacy Policy</a></li>
+          <li><a href="#terms">Terms of Service</a></li>
+        </ul>
+      </div>
+    </footer>
+    <script>
+      let currentSlide = 0;
+      const slides = document.querySelectorAll(".carousel-image");
+
+      function updateCarousel() {
+        const offset = -currentSlide * 100;
+        document.querySelector(
+          ".carousel"
+        ).style.transform = `translateX(${offset}%)`;
+      }
+
+      function moveCarousel(direction) {
+        currentSlide =
+          (currentSlide + direction + slides.length) % slides.length;
+        updateCarousel();
+      }
+
+      let currentVideo = 0;
+      const videos = document.querySelectorAll(".carousel-video");
+
+      function updateVideoCarousel() {
+        const offset = -currentVideo * 100;
+        document.querySelector(
+          ".video-carousel"
+        ).style.transform = `translateX(${offset}%)`;
+      }
+
+      function moveVideoCarousel(direction) {
+        currentVideo =
+          (currentVideo + direction + videos.length) % videos.length;
+        updateVideoCarousel();
+      }
+      function toggleMenu() {
+        const navLinks = document.getElementById("nav-links");
+        navLinks.classList.toggle("show");
+    }
+    </script>
+  </body>
+</html>
