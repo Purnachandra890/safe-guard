@@ -375,11 +375,19 @@ body {
   /* Fix the button to the bottom right */
   .download-button {
     position: fixed;
-    bottom: 20px; /* Distance from the bottom of the screen */
+    bottom: 40px; /* Distance from the bottom of the screen */
     right: 20px; /* Distance from the right side of the screen */
     z-index: 1000; /* Make sure it stays on top of other elements */
   }
 .contact-link {
     text-decoration: none; /* Remove underline */
     color: inherit; /* Inherit the text color from the parent */
+  }
+#downloaders-label {
+    position: fixed;
+    bottom: 10px; /* Slightly below the download button */
+    right: 40px; /* Align with the download button */
+    color: white;
+    font-size: 14px;
+    z-index: 999; /* Make sure it's below the button */
   }
