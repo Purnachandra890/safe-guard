@@ -263,25 +263,6 @@
       function toggleMenu() {
         const navLinks = document.getElementById("nav-links");
         navLinks.classList.toggle("show");
-    }
-      let currentVideo = 0;
-      const videos = document.querySelectorAll(".carousel-video");
-
-      function updateVideoCarousel() {
-        const offset = -currentVideo * 100;
-        document.querySelector(
-          ".video-carousel"
-        ).style.transform = `translateX(${offset}%)`;
-      }
-
-      function moveVideoCarousel(direction) {
-        currentVideo =
-          (currentVideo + direction + videos.length) % videos.length;
-        updateVideoCarousel();
-      }
-      function toggleMenu() {
-        const navLinks = document.getElementById("nav-links");
-        navLinks.classList.toggle("show");
       }
 
       let downloadCount = localStorage.getItem("downloadCount") || 0;
