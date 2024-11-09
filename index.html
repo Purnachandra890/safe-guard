@@ -48,9 +48,13 @@
           href="https://github.com/ArunKumarlakkineni/SafeGuard/raw/refs/heads/main/SafeGuard/app-debug.apk"
           class="download-button"
           download="app-debug.apk"
+          onclick="incrementDownloadCount()"
         >
           Download APK
         </a>
+        <span  id="downloaders-label" style="margin-left: 10px "
+          >Downloaders : 0</span
+        >
 
         <!-- video carousal -->
         
@@ -260,6 +264,43 @@
         const navLinks = document.getElementById("nav-links");
         navLinks.classList.toggle("show");
     }
+      let currentVideo = 0;
+      const videos = document.querySelectorAll(".carousel-video");
+
+      function updateVideoCarousel() {
+        const offset = -currentVideo * 100;
+        document.querySelector(
+          ".video-carousel"
+        ).style.transform = `translateX(${offset}%)`;
+      }
+
+      function moveVideoCarousel(direction) {
+        currentVideo =
+          (currentVideo + direction + videos.length) % videos.length;
+        updateVideoCarousel();
+      }
+      function toggleMenu() {
+        const navLinks = document.getElementById("nav-links");
+        navLinks.classList.toggle("show");
+      }
+
+      let downloadCount = localStorage.getItem("downloadCount") || 0;
+
+      // Function to update the download count
+      function incrementDownloadCount() {
+        downloadCount++; // Increment the download count
+        localStorage.setItem("downloadCount", downloadCount); // Store the updated count in localStorage
+        updateDownloadLabel(); // Update the label on the page
+      }
+
+      // Function to update the download label on the page
+      function updateDownloadLabel() {
+        const downloadersLabel = document.getElementById("downloaders-label");
+        downloadersLabel.textContent = `Downloaders ${downloadCount}`;
+      }
+
+      // Update the label when the page loads
+      updateDownloadLabel();
     </script>
   </body>
 </html>
