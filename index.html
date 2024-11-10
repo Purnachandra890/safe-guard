@@ -265,23 +265,38 @@
         navLinks.classList.toggle("show");
       }
 
-      let downloadCount = localStorage.getItem("downloadCount") || 0;
+      const downloadLabel = document.getElementById("downloaders-label");
+  let isDownloading = false; // Prevents multiple requests on a single click
 
-      // Function to update the download count
-      function incrementDownloadCount() {
-        downloadCount++; // Increment the download count
-        localStorage.setItem("downloadCount", downloadCount); // Store the updated count in localStorage
-        updateDownloadLabel(); // Update the label on the page
-      }
+  // Function to fetch and display the download count
+  async function displayDownloadCount() {
+    try {
+      const response = await fetch("http://localhost:8000/download-count");
+      const data = await response.json();
+      downloadLabel.textContent = `Downloaders: ${data.count}`;
+    } catch (error) {
+      console.error("Error fetching count:", error);
+    }
+  }
 
-      // Function to update the download label on the page
-      function updateDownloadLabel() {
-        const downloadersLabel = document.getElementById("downloaders-label");
-        downloadersLabel.textContent = `Downloaders ${downloadCount}`;
-      }
+  // Function to increment download count
+  async function incrementDownloadCount() {
+    if (isDownloading) return; // Prevent duplicate clicks
+    isDownloading = true;
 
-      // Update the label when the page loads
-      updateDownloadLabel();
+    try {
+      const response = await fetch("http://localhost:8000/increment-download", {
+        method: "POST",
+      });
+      const data = await response.json();
+      downloadLabel.textContent = `Downloaders: ${data.count}`;
+    } catch (error) {
+      console.error("Error incrementing count:", error);
+    }
+
+    setTimeout(() => {
+      isDownloading = false; // Re-enable downloading after a short delay
+    }, 500);
     </script>
   </body>
 </html>
