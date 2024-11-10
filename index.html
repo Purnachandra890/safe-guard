@@ -228,7 +228,7 @@
         </ul>
       </div>
     </footer>
-    <script>
+     <script>
       let currentSlide = 0;
       const slides = document.querySelectorAll(".carousel-image");
 
@@ -297,6 +297,15 @@
     setTimeout(() => {
       isDownloading = false; // Re-enable downloading after a short delay
     }, 500);
+  }
+
+  // Attach the function to the download button
+  document
+    .querySelector(".download-button")
+    .addEventListener("click", incrementDownloadCount);
+
+  // Display the initial count when the page loads
+  displayDownloadCount();
     </script>
   </body>
 </html>
